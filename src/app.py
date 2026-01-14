@@ -28,8 +28,8 @@ app.mount("/static", StaticFiles(directory=os.path.join(current_dir, "static")),
 # Root endpoint to redirect to static index.html
 @app.get("/")
 def root():
-    # return RedirectResponse(url="/static/index.html")
-    return RedirectResponse(url="/static/assets/index.html")
+    return RedirectResponse(url="/static/index.html")
+    # return RedirectResponse(url="/static/assets/index.html")
 
 # Include routers
 app.include_router(routers.activities.router)
